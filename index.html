@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Portfolio of Serhan Yavuz, a software developer specializing in full stack development and innovative solutions.">
     <meta name="keywords" content="Serhan Yavuz, software developer, full stack development, IoT specialist, clean architecture, AI development, Turkish Red Crescent software, AJET website, UMKE chat application, smart city IoT, innovative developer, C#, NodeJS, Python, Java, .NET Core, Docker, SQL, XMPP, Android, iOS, MQTT">
     <title>Serhan Yavuz | Developer Portfolio</title>
@@ -18,24 +18,26 @@
         header {
             background: #24292e;
             color: #fff;
-            padding: 1rem 2rem;
+            padding: 1rem;
             text-align: center;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
         header p {
             margin: 0.5rem 0;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         section {
-            max-width: 900px;
-            margin: 2rem auto;
+            width: 90%;
+            max-width: 700px;
+            margin: 1rem auto;
             padding: 1rem;
             background: #fff;
             border-radius: 6px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
         }
         .timeline {
             position: relative;
@@ -47,34 +49,28 @@
             position: absolute;
             top: 0;
             left: 50%;
-            width: 2px;
+            width: 1px;
             height: 100%;
             background: #ddd;
         }
         .event {
             position: relative;
-            width: 50%;
-            padding: 1rem;
+            width: 100%;
+            padding: 0.5rem;
             box-sizing: border-box;
-        }
-        .event.left {
-            float: left;
-            text-align: right;
-            clear: left;
-        }
-        .event.right {
-            float: right;
-            text-align: left;
-            clear: right;
+            text-align: center;
         }
         .event .content {
             background: #fff;
-            padding: 1rem;
+            padding: 0.5rem;
             border-radius: 6px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+            max-width: 90%;
         }
         .event .date {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #666;
             margin-bottom: 0.5rem;
         }
@@ -82,11 +78,12 @@
             background: #24292e;
             color: #fff;
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
+            padding: 0.5rem 0;
+            margin-top: 1rem;
         }
         footer p {
             margin: 0;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -106,49 +103,49 @@
 
     <section id="projects" class="timeline">
         <h2>Projects</h2>
-        <div class="event left">
+        <div class="event">
             <div class="content">
                 <h3>Humanitarian Aid Software</h3>
                 <p>Developed internal software for the Turkish Red Crescent to manage sensitive humanitarian aid data and generate detailed reports for partners like the European Union.</p>
                 <span class="date">Jan 2024 - Current</span>
             </div>
         </div>
-        <div class="event right">
+        <div class="event">
             <div class="content">
                 <h3>AJET Website & Lounge Access Software</h3>
                 <p>Played a key role in developing Turkish Airlines' AJET website and Lounge Access Control Software to streamline user experiences.</p>
                 <span class="date">March 2023 - Jan 2024</span>
             </div>
         </div>
-        <div class="event left">
+        <div class="event">
             <div class="content">
                 <h3>AI Sentiment Analysis Bot</h3>
                 <p>Implemented a social media sentiment analysis bot for Turkish Airlines, providing dashboards for actionable insights.</p>
                 <span class="date">March 2023 - Jan 2024</span>
             </div>
         </div>
-        <div class="event right">
+        <div class="event">
             <div class="content">
                 <h3>UMKE Chat Application</h3>
                 <p>Developed a large-scale chat application for the National Medical Search and Rescue Team, utilizing Android, iOS, and XMPP.</p>
                 <span class="date">June 2020 - March 2023</span>
             </div>
         </div>
-        <div class="event left">
+        <div class="event">
             <div class="content">
                 <h3>Smart City Prototypes</h3>
                 <p>Created IoT prototypes and proof-of-concept applications for smart city projects, leveraging 3D printing and innovative design.</p>
                 <span class="date">April 2016 - April 2018</span>
             </div>
         </div>
-        <div class="event right">
+        <div class="event">
             <div class="content">
                 <h3>Married</h3>
                 <p>A personal milestone - got married and started a new chapter in life.</p>
                 <span class="date">June 2022</span>
             </div>
         </div>
-        <div class="event left">
+        <div class="event">
             <div class="content">
                 <h3>Became a Father</h3>
                 <p>Welcomed my child into the world, an incredible life experience.</p>
@@ -160,6 +157,14 @@
     <section id="hobby-projects">
         <h2>Hobby Projects</h2>
         <p><a href="index.html">Under Construction - Click to Visit</a></p>
+    </section>
+
+    <section id="playlist">
+        <h2>Playlist</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=6ECiFfO8HV4" target="_blank">Yekte - Faslı Jazz</a></li>
+            <li><a href="https://www.youtube.com/watch?v=LjPxuY9djhw" target="_blank">Lament for Boromir - Clamavi de Profundis</a></li>
+        </ul>
     </section>
 
     <footer>
