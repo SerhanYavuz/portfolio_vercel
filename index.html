@@ -44,37 +44,54 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             font-size: 0.9rem;
         }
-        button {
-        display: block;
-        margin: 2rem auto; /* Center the button and add more spacing */
-        padding: 1rem 2rem; /* Increase padding for a larger button */
-        font-size: 1.2rem; /* Increase font size */
-        color: #fff; /* White text for contrast */
-        background-color: #000; /* Black background */
-        border: none; /* Remove borders */
-        border-radius: 8px; /* Slightly rounded corners */
-        cursor: pointer; /* Pointer cursor on hover */
-        transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
-    }
-    button:hover {
-        background-color: #444; /* Slightly lighter black on hover */
-        transform: scale(1.05); /* Slightly enlarge the button on hover */
-    }
-        .timeline .event {
+        #skills ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #skills ul li {
             margin: 1rem 0;
-            text-align: left;
+            font-size: 1rem;
+        }
+        .progress-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0.5rem;
+        }
+        .progress-bar {
+            position: relative;
             width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
         }
-        .timeline .event .content {
-            background: #fff;
-            padding: 1rem;
-            border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background-color: #007bff;
+            transition: width 0.5s ease-in-out;
         }
-        .timeline .event .date {
+        .progress-text {
             font-size: 0.8rem;
             color: #666;
             margin-top: 0.5rem;
+        }
+        button {
+            display: block;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #000;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #444;
+            transform: scale(1.05);
         }
         footer {
             background: #24292e;
@@ -87,14 +104,6 @@
         footer p {
             margin: 0;
             font-size: 0.8rem;
-        }
-        #skills ul {
-            list-style: none;
-            padding: 0;
-        }
-        #skills ul li {
-            margin: 0.5rem 0;
-            font-size: 1rem;
         }
     </style>
 </head>
@@ -115,83 +124,51 @@
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>C# - Expert</li>
-            <li>NodeJS - Intermediate</li>
-            <li>Python - Advanced</li>
-            <li>Docker - Proficient</li>
-            <li>SQL - Expert</li>
-            <li>SwiftUI - Advanced</li>
-            <li>Java/Kotlin - Advanced</li>
-            <li>React - Intermediate</li>
-            <li>Angular - Intermediate</li>
-            <li>HTML, CSS, JS - Can center a DIV</li>
-            <li>... - Can learn fast</li>
-        </ul>
-    </section>
-
-    <section id="projects" class="timeline">
-        <h2>Projects</h2>
-        <div class="event">
-            <div class="content">
-                <h3>Humanitarian Aid Software</h3>
-                <p>Developed internal software for the Turkish Red Crescent to manage sensitive humanitarian aid data and generate detailed reports for partners like the European Union.</p>
-                <span class="date">Jan 2024 - Current</span>
-            </div>
-        </div>
-        <div class="event">
-            <div class="content">
-                <h3>AJET Website & Lounge Access Software</h3>
-                <p>Played a key role in developing Turkish Airlines' AJET website and Lounge Access Control Software to streamline user experiences.</p>
-                <span class="date">March 2023 - Jan 2024</span>
-            </div>
-        </div>
-        <div class="event">
-            <div class="content">
-                <h3>AI Sentiment Analysis Bot</h3>
-                <p>Implemented a social media sentiment analysis bot for Turkish Airlines, providing dashboards for actionable insights.</p>
-                <span class="date">March 2023 - Jan 2024</span>
-            </div>
-        </div>
-        <div class="event">
-            <div class="content">
-                <h3>UMKE Chat Application</h3>
-                <p>Developed a large-scale chat application for the National Medical Search and Rescue Team, utilizing Android, iOS, and XMPP.</p>
-                <span class="date">June 2020 - March 2023</span>
-            </div>
-        </div>
-        <div class="event">
-            <div class="content">
-                <h3>Smart City Prototypes</h3>
-                <p>Created IoT prototypes and proof-of-concept applications for smart city projects, leveraging 3D printing and innovative design.</p>
-                <span class="date">April 2016 - April 2018</span>
-            </div>
-        </div>
-        <div class="event">
-            <div class="content">
-                <h3>Married</h3>
-                <p>A personal milestone - got married and started a new chapter in life.</p>
-                <span class="date">June 2022</span>
-            </div>
-        </div>
-        <div class="event">
-            <div class="content">
-                <h3>Became a Father</h3>
-                <p>Welcomed my child into the world, an incredible life experience.</p>
-                <span class="date">December 2024</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="hobby-projects">
-        <h2>Hobby Projects</h2>
-        <p><a href="index.html">Under Construction </a></p>
-    </section>
-
-    <section id="playlist">
-        <h2>Playlist</h2>
-        <ul>
-            <li><a href="https://www.youtube.com/watch?v=6ECiFfO8HV4" target="_blank">Yekte - Faslı Jazz</a></li>
-            <li><a href="https://www.youtube.com/watch?v=LjPxuY9djhw" target="_blank">Lament for Boromir - Clamavi de Profundis</a></li>
+            <li>
+                C# - Expert
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <span style="width: 85%;"></span>
+                    </div>
+                    <div class="progress-text">85% - Still room to learn!</div>
+                </div>
+            </li>
+            <li>
+                Python - Advanced
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <span style="width: 70%;"></span>
+                    </div>
+                    <div class="progress-text">70% - Always more to explore!</div>
+                </div>
+            </li>
+            <li>
+                NodeJS - Intermediate
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <span style="width: 60%;"></span>
+                    </div>
+                    <div class="progress-text">60% - A lot to master!</div>
+                </div>
+            </li>
+            <li>
+                Docker - Proficient
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <span style="width: 75%;"></span>
+                    </div>
+                    <div class="progress-text">75% - Growing every day!</div>
+                </div>
+            </li>
+            <li>
+                SQL - Expert
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <span style="width: 90%;"></span>
+                    </div>
+                    <div class="progress-text">90% - Almost there but still learning!</div>
+                </div>
+            </li>
         </ul>
     </section>
 
