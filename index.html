@@ -12,11 +12,11 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #f6f8fa;
             color: #333;
         }
         header {
-            background: #222;
+            background: #24292e;
             color: #fff;
             padding: 1rem 2rem;
             text-align: center;
@@ -29,131 +29,137 @@
             margin: 0.5rem 0;
             font-size: 1.2rem;
         }
-        nav {
-            text-align: center;
-            margin: 1rem 0;
-        }
-        nav a {
-            text-decoration: none;
-            color: #007BFF;
-            margin: 0 1rem;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
         section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+            padding: 0;
         }
-        .project {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #ddd;
         }
-        .project img {
-            max-width: 100%;
-            display: block;
+        .event {
+            position: relative;
+            width: 50%;
+            padding: 1rem;
+            box-sizing: border-box;
         }
-        .project h3 {
-            margin: 1rem;
-            font-size: 1.5rem;
+        .event.left {
+            float: left;
+            text-align: right;
+            clear: left;
         }
-        .project p {
-            margin: 0 1rem 1rem;
-            font-size: 1rem;
+        .event.right {
+            float: right;
+            text-align: left;
+            clear: right;
         }
-        button {
-            margin: 1rem auto;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        .event .content {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        button:hover {
-            background-color: #0056b3;
+        .event .date {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
         }
         footer {
-            background: #f4f4f4;
+            background: #24292e;
+            color: #fff;
             text-align: center;
             padding: 1rem 0;
             margin-top: 2rem;
-            border-top: 1px solid #ddd;
         }
         footer p {
             margin: 0;
         }
     </style>
-    <script>
-        function showContactInfo() {
-            alert("Contact Information:\nEmail: serhanyavuz5@gmail.com\nLinkedIn: https://linkedin.com/in/srhn\nPhone: +90 538 503 77 03");
-            if (typeof gtag === 'function') {
-                gtag('event', 'contact_click', {
-                    'event_category': 'Contact',
-                    'event_label': 'Get Contact Info Button',
-                    'value': 1
-                });
-            }
-        }
-    </script>
 </head>
 <body>
     <header>
         <h1>Serhan Yavuz</h1>
-        <p>Full Stack Developer</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <p>Developer</p>
     </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi, I'm Serhan Yavuz, a versatile software developer with extensive experience in full stack development, IoT, and innovative problem-solving. My expertise includes developing large-scale applications, creating IoT solutions, and implementing cutting-edge AI-driven tools. I am passionate about clean architecture and scalable, maintainable solutions. </p>
+        <p>Hi, I'm Serhan Yavuz, a versatile software developer with extensive experience in full stack development, IoT, and innovative problem-solving. My expertise includes developing large-scale applications, creating IoT solutions, and implementing cutting-edge AI-driven tools. I am passionate about clean architecture and scalable, maintainable solutions.</p>
+        <p>I also enjoy collecting retro gaming consoles and exploring the history of technology.</p>
+        <p>Check out my <a href="https://steamcommunity.com/profiles/76561198202985308/" target="_blank">Steam profile</a>.</p>
         <button onclick="location.href='yavuz_serhan_cv.pdf'">Download CV</button>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="timeline">
         <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
+        <div class="event left">
+            <div class="content">
                 <h3>Humanitarian Aid Software</h3>
                 <p>Developed internal software for the Turkish Red Crescent to manage sensitive humanitarian aid data and generate detailed reports for partners like the European Union.</p>
+                <span class="date">Jan 2024 - Current</span>
             </div>
-            <div class="project">
+        </div>
+        <div class="event right">
+            <div class="content">
                 <h3>AJET Website & Lounge Access Software</h3>
                 <p>Played a key role in developing Turkish Airlines' AJET website and Lounge Access Control Software to streamline user experiences.</p>
+                <span class="date">March 2023 - Jan 2024</span>
             </div>
-            <div class="project">
+        </div>
+        <div class="event left">
+            <div class="content">
                 <h3>AI Sentiment Analysis Bot</h3>
                 <p>Implemented a social media sentiment analysis bot for Turkish Airlines, providing dashboards for actionable insights.</p>
+                <span class="date">March 2023 - Jan 2024</span>
             </div>
-            <div class="project">
+        </div>
+        <div class="event right">
+            <div class="content">
                 <h3>UMKE Chat Application</h3>
                 <p>Developed a large-scale chat application for the National Medical Search and Rescue Team, utilizing Android, iOS, and XMPP.</p>
+                <span class="date">June 2020 - March 2023</span>
             </div>
-            <div class="project">
+        </div>
+        <div class="event left">
+            <div class="content">
                 <h3>Smart City Prototypes</h3>
                 <p>Created IoT prototypes and proof-of-concept applications for smart city projects, leveraging 3D printing and innovative design.</p>
+                <span class="date">April 2016 - April 2018</span>
+            </div>
+        </div>
+        <div class="event right">
+            <div class="content">
+                <h3>Married</h3>
+                <p>A personal milestone - got married and started a new chapter in life.</p>
+                <span class="date">June 2022</span>
+            </div>
+        </div>
+        <div class="event left">
+            <div class="content">
+                <h3>Became a Father</h3>
+                <p>Welcomed my child into the world, an incredible life experience.</p>
+                <span class="date">December 2024</span>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <button onclick="showContactInfo()">Get Contact Info</button>
+    <section id="hobby-projects">
+        <h2>Hobby Projects</h2>
+        <p><a href="index.html">Under Construction - Click to Visit</a></p>
     </section>
 
     <footer>
