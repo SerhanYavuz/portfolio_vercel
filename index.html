@@ -14,12 +14,17 @@
             padding: 0;
             background-color: #f6f8fa;
             color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         header {
             background: #24292e;
             color: #fff;
             padding: 1rem;
             text-align: center;
+            width: 100%;
         }
         header h1 {
             margin: 0;
@@ -39,40 +44,21 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             font-size: 0.9rem;
         }
-        .timeline {
-            position: relative;
-            margin: 2rem 0;
-            padding: 0;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 1px;
-            height: 100%;
-            background: #ddd;
-        }
-        .event {
-            position: relative;
+        .timeline .event {
+            margin: 1rem 0;
+            text-align: left;
             width: 100%;
-            padding: 0.5rem;
-            box-sizing: border-box;
-            text-align: center;
         }
-        .event .content {
+        .timeline .event .content {
             background: #fff;
-            padding: 0.5rem;
+            padding: 1rem;
             border-radius: 6px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            text-align: left;
-            max-width: 90%;
         }
-        .event .date {
+        .timeline .event .date {
             font-size: 0.8rem;
             color: #666;
-            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
         }
         footer {
             background: #24292e;
@@ -80,6 +66,7 @@
             text-align: center;
             padding: 0.5rem 0;
             margin-top: 1rem;
+            width: 100%;
         }
         footer p {
             margin: 0;
